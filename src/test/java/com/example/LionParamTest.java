@@ -1,23 +1,16 @@
 package com.example;
 
 import org.hamcrest.MatcherAssert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 
 
 @RunWith(Parameterized.class)
 public class LionParamTest {
-
-    @Before
-    public void init() {
-        MockitoAnnotations.initMocks(this);
-    }
 
     @Mock
     Feline feline;

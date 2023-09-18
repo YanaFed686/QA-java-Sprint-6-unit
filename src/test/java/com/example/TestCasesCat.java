@@ -10,7 +10,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.util.List;
 
 @RunWith(MockitoJUnitRunner.class)
-public class TestCases_Cat {
+public class TestCasesCat {
 
     @Mock
     Feline feline;

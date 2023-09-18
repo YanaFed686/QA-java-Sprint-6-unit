@@ -11,7 +11,7 @@ import java.util.List;
 import static org.hamcrest.CoreMatchers.equalTo;
 
 @RunWith(MockitoJUnitRunner.class)
-public class TestCases_LionAlex {
+public class TestCasesLionAlex {
 
     @Mock
     Feline feline;

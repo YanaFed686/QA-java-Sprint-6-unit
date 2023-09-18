@@ -9,7 +9,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
-public class TestCases_Feline {
+public class TestCasesFeline {
 
     @Test
     public void checkEatMeat() throws Exception {

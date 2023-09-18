@@ -1,6 +1,7 @@
 package com.example;
 
 
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
@@ -12,11 +13,12 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
-public class TestCases_Lion {
+public class TestCasesLion {
 
+    @Rule
+    public ExpectedException expectedException = ExpectedException.none();
     @Mock
     private Feline feline;
-    private ExpectedException expectedEx;
 
     @Test
     public void checkKittens() throws Exception{
@@ -41,12 +43,20 @@ public class TestCases_Lion {
     }
 
     @Test
-    public void isLionFemale()throws Exception{
+    public void isLionFemale()throws Exception {
         Lion lion = new Lion(feline, "Самка");
         boolean expected = false;
         boolean actual = lion.doesHaveMane();
         assertEquals(expected, actual);
+
     }
-}
+        @Test
+        public void newLionThrowsException() throws Exception {
+            expectedException.expect(Exception.class);
+            expectedException.expectMessage("Используйте допустимые значения пола животного - самец или самка");
+
+            new Lion(feline, "Не определено");
+        }
+    }
 
 
